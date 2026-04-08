@@ -971,9 +971,10 @@ function getSidesForWord(word) {
     ? {
         promptLabel: "Japanese",
         promptText: word.jp,
-        readingText: word.reading ? word.reading : "",
+        readingText: "",
         answerLabel: "Mongolian",
         answerText: word.mn,
+        answerReading: word.reading ? word.reading : "",
       }
     : {
         promptLabel: "Mongolian",
@@ -981,6 +982,7 @@ function getSidesForWord(word) {
         readingText: "",
         answerLabel: "Japanese",
         answerText: word.reading ? `${word.jp} ・ ${word.reading}` : word.jp,
+        answerReading: "",
       };
 }
 
@@ -1103,6 +1105,12 @@ function renderCard() {
   elements.readingText.textContent = cardSides.readingText;
   elements.answerLabel.textContent = cardSides.answerLabel;
   elements.answerText.textContent = cardSides.answerText;
+
+  if (cardSides.answerReading) {
+    elements.answerText.append(document.createElement("br"));
+    elements.answerText.append(document.createTextNode(cardSides.answerReading));
+  }
+
   elements.answerPanel.hidden = !state.revealed;
   elements.flashcard.classList.toggle("is-revealed", state.revealed);
   elements.flashcard.setAttribute(
