@@ -48,7 +48,7 @@ const vocabulary = [
     category: "General Development",
     jp: "仕様",
     reading: "しよう",
-    mn: "техникийн тодорхойлолт",
+    mn: "тодорхойлолт, хэрэгжүүлэх дүрэм, системийн шаардлагын нарийвчилсан тайлбар",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const vocabulary = [
     category: "General Development",
     jp: "判断",
     reading: "はんだん",
-    mn: "шийдвэр гаргалт",
+    mn: "шийдвэр гаргах, дүгнэх, үнэлэх",
   },
 
   {
@@ -105,7 +105,7 @@ const vocabulary = [
     category: "Agile / Management",
     jp: "見積もり",
     reading: "みつもり",
-    mn: "тооцоолол",
+    mn: "урьдчилсан тооцоо, хугацаа болон нөөцийн үнэлгээ",
   },
   {
     id: 16,
@@ -119,7 +119,7 @@ const vocabulary = [
     category: "Agile / Management",
     jp: "優先度",
     reading: "ゆうせんど",
-    mn: "давуу эрх",
+    mn: "эрэмбэ, түрүүнд хийх түвшин",
   },
   {
     id: 18,
@@ -155,7 +155,7 @@ const vocabulary = [
     category: "Architecture / System Design",
     jp: "設計",
     reading: "せっけい",
-    mn: "дизайн, архитектур",
+    mn: "төлөвлөлт, зохион байгуулалт, системийн бүтэц гаргах",
   },
   {
     id: 23,
@@ -169,7 +169,7 @@ const vocabulary = [
     category: "Architecture / System Design",
     jp: "関心の分離",
     reading: "かんしんのぶんり",
-    mn: "responsibility separation",
+    mn: "хариуцлагыг тусгаарлах, үүргийг салгах зарчим",
   },
   {
     id: 25,
@@ -197,14 +197,14 @@ const vocabulary = [
     category: "Architecture / System Design",
     jp: "非同期",
     reading: "ひどうき",
-    mn: "асинхрон",
+    mn: "дараалал хамаарахгүй зэрэг ажиллах, асинхрон",
   },
   {
     id: 29,
     category: "Architecture / System Design",
     jp: "同期",
     reading: "どうき",
-    mn: "синхрон",
+    mn: "дарааллаар зэрэгцэн ажиллах, нэг хэмнэлтэй ажиллах, синхрон",
   },
 
   {
@@ -226,28 +226,28 @@ const vocabulary = [
     category: "Web / Frontend",
     jp: "表示",
     reading: "ひょうじ",
-    mn: "харуулах",
+    mn: "дэлгэцэнд гаргах, харуулах",
   },
   {
     id: 33,
     category: "Web / Frontend",
     jp: "要素",
     reading: "ようそ",
-    mn: "элемент",
+    mn: "бүрэлдэхүүн хэсэг, элемент",
   },
   {
     id: 34,
     category: "Web / Frontend",
     jp: "開発者ツール",
     reading: "かいはつしゃツール",
-    mn: "developer tools",
+    mn: "хөгжүүлэгчийн шалгах хэрэгсэл",
   },
   {
     id: 35,
     category: "Web / Frontend",
     jp: "レスポンシブ",
     reading: "",
-    mn: "responsive дизайн",
+    mn: "дэлгэцийн хэмжээнд зохицон өөрчлөгдөх",
   },
   {
     id: 36,
@@ -261,14 +261,14 @@ const vocabulary = [
     category: "Web / Frontend",
     jp: "非同期処理",
     reading: "ひどうきしょり",
-    mn: "async процесс",
+    mn: "дараалал хамаарахгүй зэрэг гүйцэтгэх боловсруулалт",
   },
   {
     id: 38,
     category: "Web / Frontend",
     jp: "状態",
     reading: "じょうたい",
-    mn: "state",
+    mn: "төлөв, одоогийн байдал",
   },
 
   {
@@ -283,7 +283,7 @@ const vocabulary = [
     category: "Backend / API / Security",
     jp: "エンドポイント",
     reading: "",
-    mn: "endpoint",
+    mn: "хандах төгсгөлийн цэг, холболтын хаяг",
   },
   {
     id: 41,
@@ -332,14 +332,14 @@ const vocabulary = [
     category: "Backend / API / Security",
     jp: "ミドルウェア",
     reading: "",
-    mn: "middleware",
+    mn: "хоёр системийн хооронд зуучлан ажиллах давхарга",
   },
   {
     id: 48,
     category: "Backend / API / Security",
     jp: "バリデーション",
     reading: "",
-    mn: "шалгалт",
+    mn: "өгөгдлийг шалгах, зөв эсэхийг баталгаажуулах",
   },
 
   {
@@ -354,14 +354,14 @@ const vocabulary = [
     category: "Database",
     jp: "主キー",
     reading: "しゅキー",
-    mn: "primary key",
+    mn: "гол түлхүүр, давтагдахгүй таних утга",
   },
   {
     id: 51,
     category: "Database",
     jp: "外部キー",
     reading: "がいぶキー",
-    mn: "foreign key",
+    mn: "гадаад түлхүүр, өөр хүснэгттэй холбох утга",
   },
   {
     id: 52,
@@ -375,9 +375,15 @@ const vocabulary = [
     category: "Database",
     jp: "トランザクション",
     reading: "",
-    mn: "transaction",
+    mn: "нэг бүхэл ажиллагаа, бүхэлд нь амжилттай эсвэл буцаагдах үйлдэл",
   },
-  { id: 54, category: "Database", jp: "クエリ", reading: "", mn: "query" },
+  {
+    id: 54,
+    category: "Database",
+    jp: "クエリ",
+    reading: "",
+    mn: "өгөгдөл асуух, хайх команд",
+  },
   {
     id: 55,
     category: "Database",
@@ -398,7 +404,7 @@ const vocabulary = [
     category: "DevOps / Infra",
     jp: "デプロイ",
     reading: "",
-    mn: "deploy",
+    mn: "системийг серверт байршуулж ажиллуулах",
   },
   {
     id: 58,
@@ -412,7 +418,7 @@ const vocabulary = [
     category: "DevOps / Infra",
     jp: "クラウド",
     reading: "",
-    mn: "cloud",
+    mn: "интернэтээр дамжуулан сервер ашиглах орчин",
   },
   {
     id: 60,
@@ -457,21 +463,21 @@ const vocabulary = [
     category: "Test / QA",
     jp: "不具合",
     reading: "ふぐあい",
-    mn: "гажиг",
+    mn: "доголдол, гажиг, хэвийн бус ажиллагаа",
   },
   {
     id: 68,
     category: "Test / QA",
     jp: "回帰テスト",
     reading: "かいきテスト",
-    mn: "regression test",
+    mn: "өмнөх үйлдэл эвдрэлгүй эсэхийг дахин шалгах туршилт",
   },
   {
     id: 69,
     category: "Test / QA",
     jp: "境界値",
     reading: "きょうかいち",
-    mn: "boundary value",
+    mn: "хязгаарын утга, хил заагийн утга",
   },
 
   {
@@ -493,7 +499,7 @@ const vocabulary = [
     category: "Security",
     jp: "ハッシュ化",
     reading: "ハッシュか",
-    mn: "hash хийх",
+    mn: "буцаан сэргээх боломжгүй хэлбэрт хувиргах",
   },
   {
     id: 73,
@@ -515,21 +521,21 @@ const vocabulary = [
     category: "Git / Development Workflow",
     jp: "コミット",
     reading: "",
-    mn: "commit",
+    mn: "өөрчлөлтийг хадгалж тэмдэглэх",
   },
   {
     id: 76,
     category: "Git / Development Workflow",
     jp: "ブランチ",
     reading: "",
-    mn: "branch",
+    mn: "салбарласан хөгжүүлэлтийн шугам",
   },
   {
     id: 77,
     category: "Git / Development Workflow",
     jp: "マージ",
     reading: "",
-    mn: "merge",
+    mn: "өөрчлөлтүүдийг нэгтгэх",
   },
   {
     id: 78,
@@ -543,7 +549,7 @@ const vocabulary = [
     category: "Git / Development Workflow",
     jp: "プルリクエスト",
     reading: "",
-    mn: "pull request",
+    mn: "өөрчлөлтөө нэгтгэхийг хүссэн санал",
   },
   {
     id: 80,
@@ -586,7 +592,7 @@ const vocabulary = [
     category: "Product / Requirements",
     jp: "進める",
     reading: "すすめる",
-    mn: "урагшлуулах",
+    mn: "урагшлуулах, ахиулах",
   },
   {
     id: 86,
@@ -607,7 +613,7 @@ const vocabulary = [
     category: "Product / Requirements",
     jp: "含める",
     reading: "ふくめる",
-    mn: "багтаах",
+    mn: "багтаах, оруулах",
   },
   {
     id: 89,
@@ -636,7 +642,7 @@ const vocabulary = [
     category: "Analysis / Problem Solving",
     jp: "特定",
     reading: "とくてい",
-    mn: "тодорхойлох",
+    mn: "яг тодорхойлох, онцлон тогтоох",
   },
   {
     id: 93,
@@ -650,7 +656,7 @@ const vocabulary = [
     category: "Analysis / Problem Solving",
     jp: "方針",
     reading: "ほうしん",
-    mn: "бодлого, чиглэл",
+    mn: "чиглэл, бодлого, баримтлах арга",
   },
   {
     id: 95,
@@ -664,7 +670,7 @@ const vocabulary = [
     category: "Analysis / Problem Solving",
     jp: "適切",
     reading: "てきせつ",
-    mn: "тохиромжтой",
+    mn: "зохистой, тохиромжтой",
   },
   {
     id: 97,
@@ -678,7 +684,7 @@ const vocabulary = [
     category: "Analysis / Problem Solving",
     jp: "対処",
     reading: "たいしょ",
-    mn: "арга хэмжээ авах",
+    mn: "арга хэмжээ авах, шийдвэрлэх",
   },
 
   {
@@ -742,7 +748,7 @@ const vocabulary = [
     category: "Project / Management",
     jp: "仕組み",
     reading: "しくみ",
-    mn: "механизм",
+    mn: "дотоод бүтэц, ажиллах зарчим, механизм",
   },
   {
     id: 108,
@@ -1108,7 +1114,9 @@ function renderCard() {
 
   if (cardSides.answerReading) {
     elements.answerText.append(document.createElement("br"));
-    elements.answerText.append(document.createTextNode(cardSides.answerReading));
+    elements.answerText.append(
+      document.createTextNode(cardSides.answerReading),
+    );
   }
 
   elements.answerPanel.hidden = !state.revealed;
