@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese-Mongolian Tech Flashcards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="app-panel" aria-labelledby="app-title">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Japanese-Mongolian technical vocabulary</p>
+          <h1 id="app-title">Tech Flashcards</h1>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Study controls">
+        <label class="control">
+          <span class="control-label">Study mode</span>
+          <select id="modeSelect">
+            <option value="jp-to-mn">Japanese → Mongolian</option>
+            <option value="mn-to-jp">Mongolian → Japanese</option>
+            <option value="random">Random side each card</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span class="control-label">Category</span>
+          <select id="categorySelect"></select>
+        </label>
+      </section>
+
+      <section class="progress-panel" aria-labelledby="progress-title">
+        <div class="progress-header">
+          <div>
+            <h2 id="progress-title">Progress</h2>
+          </div>
+          <p id="progressText" class="progress-text">0 / 0 known</p>
+        </div>
+        <div class="progress-bar" aria-hidden="true">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <div class="stats-grid" aria-label="Session stats">
+          <article class="stat-card">
+            <span class="stat-label">Total</span>
+            <strong id="totalCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Studied</span>
+            <strong id="studiedCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Known</span>
+            <strong id="knownCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Review</span>
+            <strong id="reviewCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Left</span>
+            <strong id="remainingCount">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="card-stage" aria-labelledby="card-heading">
+        <h2 id="card-heading" class="sr-only">Flashcard</h2>
+
+        <article
+          id="flashcard"
+          class="flashcard"
+          tabindex="0"
+          role="button"
+          aria-live="polite"
+          aria-pressed="false"
+        >
+          <div class="card-topline">
+            <span id="categoryBadge" class="badge">Category</span>
+            <span id="cardStatePill" class="state-pill">Tap to reveal</span>
+          </div>
+
+          <div class="card-body">
+            <p id="promptLabel" class="card-side-label">Japanese</p>
+            <p id="promptText" class="card-text">---</p>
+            <p id="readingText" class="reading-text"></p>
+
+            <div id="answerPanel" class="answer-panel" hidden>
+              <p id="answerLabel" class="card-side-label answer-label">Mongolian</p>
+              <p id="answerText" class="card-text answer-text"></p>
+            </div>
+          </div>
+
+          <p class="card-hint">Tap to reveal</p>
+        </article>
+
+        <section id="completionState" class="completion-card" hidden aria-live="polite">
+          <p class="completion-kicker">Complete</p>
+          <h2>Баяр хүргэе.</h2>
+          <p>All cards marked known.</p>
+          <button id="restartCompleteButton" class="secondary-button" type="button">Restart session</button>
+        </section>
+
+        <div class="actions" aria-label="Card actions">
+          <button id="againButton" class="danger-button" type="button" disabled>Дахиад үзье</button>
+          <button id="knowButton" class="success-button" type="button" disabled>Мэднэ</button>
+        </div>
+
+        <div class="shortcut-note" aria-hidden="true">
+          <span><kbd>Space</kbd> reveal</span>
+          <span><kbd>Enter</kbd> know</span>
+          <span><kbd>N</kbd>/<kbd>Backspace</kbd> again</span>
+        </div>
+
+        <button id="restartButton" class="text-button" type="button">Restart current session</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
